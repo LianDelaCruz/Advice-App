@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="./script.js" defer></script>
     <title>ADVICE?</title>
 </head>
 <body>
-    <header>
-        <h1 class="">Would you like to have an advice?</h1>
-    </header>
     <div id="container"> 
-        <section id="section-one">
-            <div id="current-advice-content"></div>
-            <button id="submit-btn">YES, PLEASE!</button> 
-        </section>
+        <header>
+            <h1 class="">Would you like an advice?</h1>
+        </header>
+        <div class="content">
+            <section>
+                <div id="current-advice-content"></div>
+                <button class="button button1" id="submit-btn">YES, PLEASE!</button> 
+            </section>
 
-        <section id="section-two">
-            <ul id="advice-list-content"></ul>
-            <button id="remove-btn">CLEAR LIST</button>
-        </section>
-
+            <section id="advice-list-container" >
+                <ul id="advice-list-content"></ul>
+                <button class="button button1" id="remove-btn">CLEAR LIST</button>
+            </section>
+        </div>
     </div>
 </body>
 </html>
