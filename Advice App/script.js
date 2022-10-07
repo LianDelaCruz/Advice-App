@@ -27,7 +27,7 @@ function displayAdvice() {
             currentAdvice.innerHTML ='"'+ advice + '"';
             if (previousAdvice) {
                 addAdviceToList(previousAdvice);
-            } //This is to not show the previous advice once the button is clicked.
+            } //This is to not show the previous advice in the current advice section and move it in the advice list once the button is clicked.
             previousAdvice = advice;
         }).catch(
             (error) => {
