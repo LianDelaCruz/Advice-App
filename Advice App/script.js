@@ -8,7 +8,7 @@ let previousAdvice;
 
 submitBtn.addEventListener("click", displayAdvice);
 removeBtn.addEventListener("click", removeListOfAdvice);
-hideRemoveBtn             ();
+hideRemoveBtn();
 
 
 /*This function fetches the data from API and display it in the DOM.*/
