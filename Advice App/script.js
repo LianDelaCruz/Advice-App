@@ -8,7 +8,7 @@ let previousAdvice;
 
 submitBtn.addEventListener("click", displayAdvice);
 removeBtn.addEventListener("click", removeListOfAdvice);
-hideListContainer();
+hideRemoveBtn             ();
 
 
 /*This function fetches the data from API and display it in the DOM.*/
@@ -27,7 +27,7 @@ function displayAdvice() {
             currentAdvice.innerHTML ='"'+ advice + '"';
             if (previousAdvice) {
                 addAdviceToList(previousAdvice);
-            }
+            } //This is to not show the previous advice once the button is clicked.
             previousAdvice = advice;
         }).catch(
             (error) => {
@@ -41,7 +41,7 @@ function addAdviceToList(advice) {
     const adviceListItem = document.createElement('li');
     adviceListItem.textContent = advice;
     adviceListContent.appendChild(adviceListItem);
-    showListContainer();
+    showRemoveBtn();
 }
 /*This function clears the list in the DOM*/
 function removeListOfAdvice() {
@@ -50,10 +50,10 @@ function removeListOfAdvice() {
 }
 
 /*Functions to show and hide the list container in the DOM */
-function showListContainer () {
-    ListContainer.style.visibility = '' ;
+function showRemoveBtn () {
+    removeBtn.style.visibility = '' ;
 }
 
-function hideListContainer () {
-    ListContainer.style.visibility = 'hidden';
+function hideRemoveBtn () {
+    removeBtn.style.visibility = 'hidden';
 } 
