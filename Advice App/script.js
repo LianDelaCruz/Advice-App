@@ -49,7 +49,7 @@ function removeListOfAdvice() {
     removeBtn.style.visibility = 'hidden';
 }
 
-/*Functions to show and hide the list container in the DOM */
+/*Functions to show and hide the clear list button in the DOM */
 function showRemoveBtn () {
     removeBtn.style.visibility = '' ;
 }
