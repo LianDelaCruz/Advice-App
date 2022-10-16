@@ -12,12 +12,13 @@ hideRemoveBtn();
 
 
 /*This function fetches the data from API and display it in the DOM.*/
-function displayAdvice() {   
+function displayAdvice() {  
     fetch(url).then(
         (response) => {
             return response.json();
         }).then(
         (adviceData) => {
+
             const advice = adviceData.slip.advice;
             if (advice===previousAdvice) { //I added this as I have noticed that the data being fetched is repeated.
                 displayAdvice()
@@ -46,14 +47,15 @@ function addAdviceToList(advice) {
 /*This function clears the list in the DOM*/
 function removeListOfAdvice() {
     adviceListContent.textContent = '';
-    removeBtn.style.visibility = 'hidden';
+    //removeBtn.style.display = 'none';
+    hideRemoveBtn();
 }
 
 /*Functions to show and hide the clear list button in the DOM */
 function showRemoveBtn () {
-    removeBtn.style.visibility = '' ;
+    removeBtn.style.display = 'block' ;
 }
 
 function hideRemoveBtn () {
-    removeBtn.style.visibility = 'hidden';
+    removeBtn.style.display = 'none';
 } 
